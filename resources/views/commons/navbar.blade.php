@@ -1,4 +1,5 @@
 <header class="mb-4">
+
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> 
         <a class="navbar-brand" href="/">Tweet</a>
          
@@ -9,9 +10,11 @@
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link">Signup！</a></li>
+                <li class="nav-item"><a href="{{ route('signup.get')}}" class="nav-link">Signup！</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
             </ul>
         </div>
+
     </nav>
+
 </header>
