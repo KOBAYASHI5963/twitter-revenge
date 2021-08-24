@@ -10,8 +10,15 @@
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
+            @if (Auth::check())
+                    <li class="dropdown-item"><a href="{{ route('users.index') }}">Users</a></li>
+                    <li class="dropdown-item"><a href="{{ route('users.show',Auth::id()) }}">My profile</a></li>
+                    <li class="dropdown-item"><a href="{{ route('logout.get') }}">Logout</a></li>
+            @else
+                    <li class="nav-item dropdown">
                 <li class="nav-item"><a href="{{ route('signup.get')}}" class="nav-link">Signup！</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+            @endif
             </ul>
         </div>
 
